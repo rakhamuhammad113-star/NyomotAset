@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #0f172a;
+  color: #f8fafc;
+  line-height: 1.6;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background-color: #1e293b;
+  border-bottom: 1px solid #334155;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #38bdf8;
+}
+
+.logo strong {
+  color: #f8fafc;
+}
+
+nav a {
+  color: #94a3b8;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #38bdf8;
+}
+
+.hero-section {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(to bottom, #1e293b, #0f172a);
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #f8fafc;
+}
+
+.hero-section p {
+  font-size: 1.1rem;
+  color: #94a3b8;
+  max-width: 600px;
+  margin: 0 auto 25px auto;
+}
+
+.btn-primary {
+  display: inline-block;
+  background-color: #38bdf8;
+  color: #0f172a;
+  padding: 10px 25px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #0ea5e9;
+}
+
+.asset-section,
+.about-section {
+  padding: 60px 8%;
+  text-align: center;
+}
+
+.asset-section h2,
+.about-section h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #f8fafc;
+}
+
+.asset-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.asset-card {
+  background-color: #1e293b;
+  padding: 30px;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  text-align: left;
+}
+
+.asset-card h3 {
+  color: #38bdf8;
+  margin-bottom: 10px;
+}
+
+.asset-card p {
+  color: #94a3b8;
+}
+
+.kartu-about {
+  background-color: #1e293b;
+  padding: 40px;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 0 auto;
+  border: 1px solid #334155;
+  text-align: left;
+}
+
+.about-info h3 {
+  color: #38bdf8;
+  margin-bottom: 15px;
+}
+
+.about-info p {
+  color: #94a3b8;
+  margin-bottom: 10px;
+}
+
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  display: inline-block;
+  background-color: #334155;
+  color: #f8fafc;
+  padding: 6px 15px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #1e293b;
+  color: #64748b;
+  font-size: 0.9rem;
+  border-top: 1px solid #334155;
+}
+.section-desc {
+  color: #94a3b8;
+  margin-bottom: 30px;
+  font-size: 1.05rem;
+}
+
+.btn-download {
+  display: inline-block;
+  margin-top: 15px;
+  background-color: #334155;
+  color: #38bdf8;
+  padding: 8px 15px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition:
+    background 0.3s,
+    color 0.3s;
+}
+
+.btn-download:hover {
+  background-color: #38bdf8;
+  color: #0f172a;
+}
