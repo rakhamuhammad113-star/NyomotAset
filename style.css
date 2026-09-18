@@ -179,3 +179,420 @@ footer {
   background-color: #38bdf8;
   color: #0f172a;
 }
+/* PENGATURAN SUPAYA RAPI DI HP / LAYAR KECIL */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 15px;
+    text-align: center;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  nav a {
+    margin: 0 10px;
+    font-size: 0.9rem;
+  }
+
+  .hero-section h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+  }
+
+  .asset-section,
+  .about-section {
+    padding: 40px 5%;
+  }
+}
+/* GAYA KOTAK FITUR TAMBAHAN */
+.features-section {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 10%;
+  background-color: #0f172a;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  padding: 25px;
+  border-radius: 8px;
+  width: 280px;
+  text-align: left;
+}
+
+.feature-card h3 {
+  color: #38bdf8;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.feature-card p {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* SUPAYA KOTAK FITUR RAPI DI HP */
+@media (max-width: 768px) {
+    .features-section {
+        flex-direction: column; /* Kotaknya otomatis turun ke bawah secara vertikal */
+        align-items: center;
+        padding: 30px 5%;
+    }
+
+    .feature-card {
+        width: 100%; /* Lebar kotak menyesuaikan layar HP */
+    }
+}
+
+/* GAYA KOTAK PENCARIAN */
+.search-container {
+    margin: 20px 0 30px 0;
+    text-align: center;
+}
+
+.search-container input {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px 20px;
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.search-container input:focus {
+    border-color: #38bdf8;
+}
+
+.asset-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.asset-card {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    padding: 20px;
+    border-radius: 8px;
+    width: 250px;
+    text-align: left;
+}
+
+/* GAYA TOMBOL FILTER KATEGORI */
+.filter-search-container {
+    margin: 20px 0 30px 0;
+    text-align: center;
+}
+
+.filter-search-container input {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px 20px;
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 1rem;
+    outline: none;
+    margin-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.category-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    color: #94a3b8;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
+
+.filter-btn:hover {
+    background-color: #334155;
+    color: #ffffff;
+}
+
+.filter-btn.active {
+    background-color: #38bdf8;
+    color: #0f172a;
+    border-color: #38bdf8;
+    font-weight: 600;
+}
+
+/* GAYA TAMPILAN MODAL / POP-UP */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 23, 42, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 450px;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1.5rem;
+    color: #94a3b8;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.close-btn:hover {
+    color: #ffffff;
+}
+
+.modal-content h2 {
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.modal-content p {
+    color: #cbd5e1;
+    margin: 8px 0;
+    font-size: 0.95rem;
+}
+
+.asset-card {
+    cursor: pointer;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.asset-card:hover {
+    transform: translateY(-3px);
+    border-color: #38bdf8;
+}
+
+/* PENGATURAN TEMA TERANG (LIGHT MODE) */
+body.light-mode {
+    background-color: #f8fafc;
+    color: #0f172a;
+}
+
+body.light-mode header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+body.light-mode .logo {
+    color: #0f172a;
+}
+
+body.light-mode nav a {
+    color: #475569;
+}
+
+body.light-mode nav a:hover, 
+body.light-mode nav a.active {
+    color: #0284c7;
+}
+
+body.light-mode .search-container input,
+body.light-mode .filter-btn,
+body.light-mode .asset-card,
+body.light-mode .modal-content {
+    background-color: #ffffff;
+    border-color: #cbd5e1;
+    color: #0f172a;
+}
+
+body.light-mode .asset-card h3,
+body.light-mode .modal-content h2 {
+    color: #0f172a;
+}
+
+body.light-mode .asset-card p,
+body.light-mode .modal-content p {
+    color: #475569;
+}
+
+body.light-mode .filter-btn {
+    color: #475569;
+}
+
+body.light-mode .filter-btn:hover {
+    background-color: #f1f5f9;
+    color: #0f172a;
+}
+
+body.light-mode .filter-btn.active {
+    background-color: #0284c7;
+    color: #ffffff;
+    border-color: #0284c7;
+}
+
+/* GAYA TOMBOL SAKLAR DI NAVBAR */
+.theme-btn {
+    background: none;
+    border: 1px solid #334155;
+    color: #cbd5e1;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    margin-left: 10px;
+    transition: all 0.3s;
+}
+
+.theme-btn:hover {
+    background-color: #334155;
+    color: #ffffff;
+}
+
+body.light-mode .theme-btn {
+    border-color: #cbd5e1;
+    color: #475569;
+}
+
+body.light-mode .theme-btn:hover {
+    background-color: #f1f5f9;
+    color: #0f172a;
+}
+
+/* Bikin tulisan Aset di logo keliatan pas mode terang */
+body.light-mode .logo strong {
+    color: #0284c7;
+}
+
+/* PERBAIKAN WARNA TEKS DI TEMA TERANG */
+body.light-mode header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #cbd5e1;
+}
+
+body.light-mode .logo {
+    color: #0f172a;
+}
+
+body.light-mode .logo strong {
+    color: #0284c7;
+}
+
+body.light-mode nav a {
+    color: #334155; /* Warna teks menu jadi lebih gelap & jelas */
+    font-weight: 500;
+}
+
+body.light-mode nav a:hover, 
+body.light-mode nav a.active {
+    color: #0284c7;
+}
+
+body.light-mode .theme-btn {
+    border-color: #cbd5e1;
+    color: #334155;
+    background-color: #f1f5f9;
+}
+
+body.light-mode .theme-btn:hover {
+    background-color: #e2e8f0;
+    color: #0f172a;
+}
+
+/* SUPAYA JUDUL & DESKRIPSI KELIATAN JELAS DI TEMA TERANG */
+body.light-mode .asset-section h2 {
+    color: #0f172a;
+}
+
+body.light-mode .asset-section p {
+    color: #475569;
+}
+
+/* GAYA KOTAK FORMULIR UNGGAH */
+.upload-container {
+    max-width: 500px;
+    margin: 30px auto;
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #cbd5e1;
+    font-size: 0.95rem;
+}
+
+.form-group input, 
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 1rem;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.form-group input:focus, 
+.form-group select:focus {
+    border-color: #38bdf8;
+}
+
+/* PENYESUAIAN LIGHT MODE UNTUK FORMULIR */
+body.light-mode .upload-container {
+    background-color: #ffffff;
+    border-color: #cbd5e1;
+}
+
+body.light-mode .form-group label {
+    color: #334155;
+}
+
+body.light-mode .form-group input, 
+body.light-mode .form-group select {
+    background-color: #f8fafc;
+    border-color: #cbd5e1;
+    color: #0f172a;
+}

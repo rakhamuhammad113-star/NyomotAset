@@ -1,70 +1,80 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Koleksi Aset - NyomotAset</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- NAVBAR KHUSUS HALAMAN KEDUA -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   <!-- NAVBAR -->
     <header>
-      <div class="logo">Nyomot<strong>Aset</strong></div>
-      <nav>
-        <a href="index.html">Beranda</a>
-        <a href="assets.html" class="active">Koleksi Aset</a>
-        <a href="index.html#about">Tentang Pembuat</a>
-      </nav>
+        <div class="logo">Nyomot<strong>Aset</strong></div>
+        <nav>
+            <a href="index.html">Beranda</a>
+            <a href="assets.html" class="active">Aset Animasi</a>
+            <a href="upload.html">Unggah Aset</a>
+            <a href="index.html#about">Tentang Pembuat</a>
+            <!-- TOMBOL SAKLAR TEMA -->
+            <button id="themeToggle" class="theme-btn" onclick="toggleTheme()">☀️ Terang</button>
+        </nav>
     </header>
 
-    <!-- BAGIAN UTAMA KOLEKSI ASET -->
+    <!-- HALAMAN KOLEKSI ASET -->
     <section class="asset-section">
-      <h2>Semua Koleksi Aset Animasi</h2>
-      <p class="section-desc">
-        Pilih dan unduh aset yang kamu butuhkan untuk proyek animasi Skenda.
-      </p>
+        <h2>Koleksi Aset Animasi</h2>
+        <p>Cari dan unduh aset yang kamu butuhkan untuk proyek animasi.</p>
 
-      <div class="asset-grid">
-        <div class="asset-card">
-          <h3>Karakter 2D (Sprite)</h3>
-          <p>
-            Kumpulan karakter animasi siap pakai lengkap dengan berbagai
-            ekspresi.
-          </p>
-          <a href="#" class="btn-download">Unduh Aset</a>
+        <!-- KOTAK PENCARIAN & TOMBOL FILTER KATEGORI -->
+        <div class="filter-search-container">
+            <input type="text" id="searchBox" placeholder="🔍 Ketik nama aset...">
+            
+            <div class="category-buttons">
+                <button class="filter-btn active" onclick="filterCategory('all')">Semua</button>
+                <button class="filter-btn" onclick="filterCategory('karakter')">Karakter</button>
+                <button class="filter-btn" onclick="filterCategory('props')">Props / Properti</button>
+            </div>
         </div>
-        <div class="asset-card">
-          <h3>Background / Latar Sekolah</h3>
-          <p>
-            Pilihan latar belakang digital bertema lingkungan sekolah dan kelas.
-          </p>
-          <a href="#" class="btn-download">Unduh Aset</a>
-        </div>
-        <div class="asset-card">
-          <h3>Properti Objek 2D</h3>
-          <p>
-            Berbagai macam objek pendukung scene animasi seperti meja, kursi,
-            dll.
-          </p>
-          <a href="#" class="btn-download">Unduh Aset</a>
-        </div>
-        <div class="asset-card">
-          <h3>Efek Visual (VFX)</h3>
-          <p>
-            Aset animasi pendukung seperti ledakan kecil, asap, atau kilatan
-            cahaya.
-          </p>
-          <a href="#" class="btn-download">Unduh Aset</a>
-        </div>
-      </div>
-    </section>
 
-    <!-- FOOTER -->
-    <footer>
-      <p>
-        &copy; 2026 NyomotAset - Dibuat dengan semangat oleh Muhammad Rakha
-        Skenda.
-      </p>
-    </footer>
-  </body>
+       
+
+    <!-- KODE JAVASCRIPT LIVE SEARCH & FILTER KATEGORI -->
+    <script src="script.js"></script>
+
+    <!-- KODE MODAL / POP-UP DETAIL ASET -->
+    <div id="assetModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle">Judul Aset</h2>
+            <p><strong>Kategori:</strong> <span id="modalCategory">-</span></p>
+            <p><strong>Format File:</strong> <span id="modalFormat">-</span></p>
+            <p><strong>Ukuran File:</strong> 15 MB</p>
+            <p><strong>Pembuat:</strong> Siswa Animasi Skenda</p>
+            <hr style="border: 0.5px solid #334155; margin: 15px 0;">
+            <p style="color: #94a3b8; font-size: 0.9rem;">Pastikan menggunakan software versi terbaru untuk membuka aset ini.</p>
+            <a href="#" id="modalDownloadBtn" class="btn-download" style="display: block; text-align: center; margin-top: 20px;">Download Sekarang</a>
+        </div>
+    </div>
+
+    <!-- DAFTAR KARTU ASET -->
+        <div class="asset-grid" id="assetGrid">
+            <div class="asset-card" data-category="karakter" onclick="openModal('Karakter Robot 3D', 'Karakter', '.fbx / .obj')">
+                <h3>Karakter Robot 3D</h3>
+                <p>Format: .fbx / .obj</p>
+                <span style="font-size: 0.85rem; color: #38bdf8;">Klik untuk detail &rarr;</span>
+            </div>
+            <div class="asset-card" data-category="karakter" onclick="openModal('Rigging Karakter Manusia', 'Karakter', '.blend')">
+                <h3>Rigging Karakter Manusia</h3>
+                <p>Format: .blend</p>
+                <span style="font-size: 0.85rem; color: #38bdf8;">Klik untuk detail &rarr;</span>
+            </div>
+            <div class="asset-card" data-category="props" onclick="openModal('Properti Pedang Fantasi', 'Props / Properti', '.obj')">
+                <h3>Properti Pedang Fantasi</h3>
+                <p>Format: .obj</p>
+                <span style="font-size: 0.85rem; color: #38bdf8;">Klik untuk detail &rarr;</span>
+            </div>
+        </div>
+
+</body>
 </html>
