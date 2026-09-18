@@ -1,0 +1,232 @@
+/* --- GAYA DASAR --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #d3d8db;
+    color: #333;
+    margin: 0;
+}
+
+header {
+    background-color: #d32f2f;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+.kategori h2 {
+    text-align: center;
+}
+
+.kategori ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.kategori li {
+    background-color: #ffeaa7;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* --- GALERI GRID & KARTU (YANG BIKIN JEJER KE SAMPING) --- */
+.galeri-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.kartu-aset {
+    background-color: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.kartu-aset:hover {
+    transform: translateY(-8px);
+}
+
+/* --- ATUR UKURAN GAMBAR AGAR TIDAK RAKSASA --- */
+.kartu-aset img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* --- TOMBOL DOWNLOAD --- */
+.tombol-download {
+    display: inline-block;
+    background-color: #2b2b2b;
+    color: white;
+    padding: 8px 16px;
+    margin-top: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.tombol-download:hover {
+    background-color: #ff6b6b;
+}
+/* --- STYLING NAVBAR KATEGORI --- */
+.navbar-kategori {
+    background-color: #2b2b2b;
+    padding: 12px 0;
+    margin: 20px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100; /* Biar navbar tetap nempel di atas pas di-scroll */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.navbar-kategori ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.navbar-kategori a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #ff6b6b; /* Warna aksen merah */
+    padding: 8px 18px;
+    border-radius: 20px;
+    transition: background-color 0.2s, transform 0.2s;
+    display: inline-block;
+}
+
+.navbar-kategori a:hover {
+    background-color: #d32f2f;
+    transform: translateY(-2px);
+}
+
+/* Biar transisi loncatan halamannya mulus (*smooth scroll*) */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Jarak antar etalase biar nggak terlalu dempet */
+.etalase {
+    margin-bottom: 40px;
+    padding-top: 20px;
+}
+/* --- STYLING SEARCH BOX --- */
+.search-box {
+    margin-top: 15px;
+}
+
+.search-box input {
+    width: 60%;
+    max-width: 400px;
+    padding: 10px 15px;
+    border-radius: 25px;
+    border: none;
+    font-size: 14px;
+    outline: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+/* --- PENGATURAN DARK MODE --- */
+
+/* Saat mode gelap aktif (class 'dark-mode' nempel di tag <body>) */
+body.dark-mode {
+    background-color: #121212; /* Warna latar belakang gelap gulita */
+    color: #e0e0e0;            /* Warna teks jadi abu-abu terang agar terbaca */
+}
+
+body.dark-mode header {
+    background-color: #1f1f1f; /* Header jadi lebih gelap elegan */
+}
+
+body.dark-mode .kartu-aset {
+    background-color: #1e1e1e; /* Kartu aset jadi gelap */
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(255,255,255,0.05); /* Sedikit bayangan terang tipis */
+}
+
+body.dark-mode .navbar-kategori {
+    background-color: #1a1a1a;
+}
+
+body.dark-mode .search-box input {
+    background-color: #2d2d2d;
+    color: white;
+}
+
+body.dark-mode .search-box input::placeholder {
+    color: #aaa;
+}
+/* --- STYLING HALAMAN ABOUT ME --- */
+.about-section {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: left;
+}
+
+.kartu-about {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.about-info h3 {
+    margin-top: 0;
+    color: #d32f2f;
+}
+
+.about-info p {
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+.social-links {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.btn-sosmed {
+    background-color: #2b2b2b;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.btn-sosmed:hover {
+    background-color: #ff6b6b;
+}
+
+/* --- DUKUNGAN DARK MODE UNTUK ABOUT ME --- */
+body.dark-mode .kartu-about {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    box-shadow: 0 4px 8px rgba(255,255,255,0.05);
+}
+
+body.dark-mode .about-info h3 {
+    color: #ff6b6b;
+}
