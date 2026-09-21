@@ -753,3 +753,49 @@ body.light-mode .hero p {
 .filter-search-container {
     margin-bottom: 30px; /* Memberikan jarak aman ke kartu aset di bawahnya */
 }
+/* Mengatur kotak tombol kategori agar pas di HP */
+.category-buttons {
+    display: flex;
+    gap: 8px;
+    flex-wrap: nowrap; /* Mencegah tombol turun baris secara acak */
+    overflow-x: auto;   /* Membuatnya bisa digeser ke samping jika kepenuhan */
+    padding-bottom: 8px;
+    width: 100%;
+    scrollbar-width: none; /* Menyembunyikan scrollbar di Firefox */
+}
+
+/* Menyembunyikan scrollbar untuk Chrome/Safari */
+.category-buttons::-webkit-scrollbar {
+    display: none;
+}
+
+/* Memastikan ukuran tombol tetap pas dan tidak ikut menciut */
+.filter-btn {
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+/* Mengatur navigasi agar otomatis menyesuaikan saat dibuka di HP */
+@media screen and (max-width: 768px) {
+    /* Membuat header/navigasi tersusun rapi secara vertikal */
+    header, .nav-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 15px;
+    }
+
+    /* Merapikan daftar menu di bawah logo agar tidak bertumpuk */
+    nav ul, .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        padding: 0;
+        margin: 5px 0 0 0;
+    }
+
+    /* Mengecilkan sedikit ukuran teks menu agar muat di layar HP */
+    nav ul li a, .nav-links a {
+        font-size: 14px;
+    }
+}
