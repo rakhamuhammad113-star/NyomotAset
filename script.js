@@ -83,3 +83,56 @@ function handleUpload(event) {
     alert("Terima kasih! Aset berhasil diajukan dan akan ditinjau oleh administrator.");
     document.getElementById('uploadForm').reset();
 }
+// Data contoh aset (sesuaikan dengan data yang kamu miliki)
+    const dataAset = [
+        { id: 1, nama: "Karakter Hero 3D", kategori: "karakter", tanggal: "2023-10-01" },
+        { id: 2, nama: "Suara Bel Sekolah", kategori: "audio", tanggal: "2023-10-05" },
+        { id: 3, nama: "Karakter Villain", kategori: "karakter", tanggal: "2023-10-02" }
+    ];
+
+    const inputSearch = document.getElementById('searchBox');
+    const selectSort = document.getElementById('sort_filter');
+    // Pastikan kamu punya div dengan id="hasil_pencarian" di bawah tombol kategori
+    const tempatHasil = document.getElementById('hasil_pencarian'); 
+
+    function tampilkanData() {
+        const keyword = inputSearch.value.toLowerCase();
+        const sort = selectSort.value;
+
+        // Filter berdasarkan pencarian
+        let hasilFilter = dataAset.filter(aset => 
+            aset.nama.toLowerCase().includes(keyword)
+        );
+
+        // Sorting
+        if (sort === 'terbaru') {
+            hasilFilter.sort((a, b) => new Date(b.tanggal) - new Date(a.tanggal));
+        } else if (sort === 'terlama') {
+            hasilFilter.sort((a, b) => new Date(a.tanggal) - new Date(b.tanggal));
+        } else if (sort === 'az') {
+            hasilFilter.sort((a, b) => a.nama.localeCompare(b.nama));
+        } else if (sort === 'za') {
+            hasilFilter.sort((a, b) => b.nama.localeCompare(a.nama));
+        }
+
+        // Render HTML
+        tempatHasil.innerHTML = '';
+        if (hasilFilter.length === 0) {
+            tempatHasil.innerHTML = '<p>Aset tidak ditemukan.</p>';
+            return;
+        }
+
+        hasilFilter.forEach(aset => {
+            tempatHasil.innerHTML += `
+                <div class="aset-item">
+                    <h3>${aset.nama}</h3>
+                    <p>Kategori: ${aset.kategori}</p>
+                </div>
+            `;
+        });
+    }
+
+    // Jalankan event listener
+    inputSearch.addEventListener('input', tampilkanData);
+    selectSort.addEventListener('change', tampilkanData);
+    tampilkanData();

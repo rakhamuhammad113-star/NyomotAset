@@ -596,3 +596,160 @@ body.light-mode .form-group select {
     border-color: #cbd5e1;
     color: #0f172a;
 }
+/* MEMPERBAIKI WARNA TOMBOL TEMA SAAT LIGHT MODE AKTIF */
+body.light-mode .theme-btn {
+    background-color: #e2e8f0;
+    color: #0f172a;
+    border: 1px solid #cbd5e1;
+}
+
+/* MEMPERBAIKI WARNA MENU NAVBAR SAAT LIGHT MODE AKTIF */
+body.light-mode nav a {
+    color: #334155;
+}
+
+body.light-mode nav a:hover, 
+body.light-mode nav a.active {
+    color: #0284c7;
+}
+/* PENYESUAIAN KOTAK HERO & KARTU DI INDEX.HTML SAAT LIGHT MODE */
+body.light-mode .hero-section,
+body.light-mode .hero,
+body.light-mode section.hero {
+    background-color: #f1f5f9;
+    color: #0f172a;
+}
+
+body.light-mode .hero-section p,
+body.light-mode .hero p {
+    color: #334155;
+}
+
+body.light-mode .feature-card,
+body.light-mode .card {
+    background-color: #ffffff;
+    border-color: #cbd5e1;
+    color: #0f172a;
+}
+
+body.light-mode .feature-card p,
+body.light-mode .card p {
+    color: #475569;
+}
+/* GANTI LATAR BELAKANG UTAMA SAAT LIGHT MODE AKTIF */
+body.light-mode {
+    background-color: #f8fafc;
+    color: #0f172a;
+}
+
+/* KHUSUS UNTUK HERO SECTION / KOTAK UTAMA DI INDEX.HTML */
+body.light-mode .hero,
+body.light-mode header + section,
+body.light-mode main section:first-of-type {
+    background-color: #f1f5f9 !important;
+    color: #0f172a !important;
+}
+
+body.light-mode .hero h1,
+body.light-mode .hero p {
+    color: #0f172a !important;
+}
+/* Pembungkus utama agar terlihat seperti satu kotak pencarian besar */
+.search-wrapper {
+    display: flex;
+    align-items: center;
+    background-color: #222; /* Sesuaikan warna tema gelapmu */
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 5px 10px;
+    flex: 1;
+    min-width: 250px;
+}
+
+/* Kotak teks mengisi sisa ruang */
+#searchBox {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: #fff;
+    padding: 8px;
+    font-size: 14px;
+    outline: none;
+}
+
+/* Dropdown menempel rapi di sebelah kanan dalam kotak */
+#sort_filter {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+    outline: none;
+}
+
+
+/* Container untuk tombol kategori dan sorting */
+.category-buttons, .search-wrapper {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+/* Menyamakan gaya dropdown sorting agar mirip seperti tombol kategori */
+#sort_filter {
+    background-color: #2b2b2b; /* Sesuaikan dengan warna tombol kategori */
+    color: #ffffff;
+    border: 1px solid #444444;
+    padding: 8px 14px;
+    border-radius: 8px; /* Membuat sudutnya melengkung sama seperti tombol */
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+    transition: 0.2s ease;
+}
+
+/* Efek saat kursor diarahkan ke dropdown */
+#sort_filter:hover {
+    border-color: #00bcd4; /* Sesuaikan warna aksen webmu */
+}
+/* Mengatur kotak pembungkus tombol kategori */
+.category-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap; /* Agar tombol turun ke baris bawah jika layar penuh */
+    margin-top: 15px;
+}
+
+/* Desain tombol kategori */
+.filter-btn {
+    background-color: #2b2b2b;
+    color: #b0b0b0;
+    border: 1px solid #444;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Efek saat kursor diarahkan ke tombol */
+.filter-btn:hover {
+    background-color: #3b3b3b;
+    color: #fff;
+    border-color: #666;
+}
+
+/* Gaya untuk tombol kategori yang sedang aktif (diklik) */
+.filter-btn.active {
+    background-color: #00bcd4; /* Sesuaikan warna aksen terang webmu */
+    color: #000;
+    font-weight: bold;
+    border-color: #00bcd4;
+}
+.filter-search-container {
+    margin-bottom: 30px; /* Memberikan jarak aman ke kartu aset di bawahnya */
+}

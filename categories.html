@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kategori Aset - NyomotAset</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <div class="logo">Nyomot<strong>Aset</strong></div>
+        <nav>
+            <a href="index.html">Beranda</a>
+            <a href="assets.html">Aset Animasi</a>
+            <a href="categories.html" class="active">Kategori</a>
+            <a href="upload.html">Unggah Aset</a>
+        </nav>
+    </header>
+
+    <!-- KONTEN KATEGORI -->
+    <section class="asset-section">
+        <h2>Jelajahi Berdasarkan Kategori</h2>
+        <p>Pilih kategori aset animasi yang kamu butuhkan untuk proyek sekolah.</p>
+
+        <div class="category-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 30px; text-align: left;">
+            
+            <!-- Kategori 1: Karakter -->
+            <div class="asset-card" onclick="window.location.href='assets.html?cat=karakter'" style="cursor: pointer;">
+                <h3>🤖 Karakter 3D / 2D</h3>
+                <p>Kumpulan model karakter siap rigging untuk berbagai kebutuhan animasi cerita.</p>
+                <span style="color: #38bdf8; font-size: 0.9rem; font-weight: bold;">Lihat Aset &rarr;</span>
+            </div>
+
+            <!-- Kategori 2: Props -->
+            <div class="asset-card" onclick="window.location.href='assets.html?cat=props'" style="cursor: pointer;">
+                <h3>📦 Props & Lingkungan</h3>
+                <p>Objek pendukung latar belakang seperti bangunan, kendaraan, dan properti benda.</p>
+                <span style="color: #38bdf8; font-size: 0.9rem; font-weight: bold;">Lihat Aset &rarr;</span>
+            </div>
+
+            <!-- Kategori 3: Efek / Lainnya -->
+            <div class="asset-card" onclick="window.location.href='assets.html?cat=effects'" style="cursor: pointer;">
+                <h3>✨ Efek & Lainnya</h3>
+                <p>Elemen visual pendukung seperti partikel, teks animasi, dan pernak-pernik tambahan.</p>
+                <span style="color: #38bdf8; font-size: 0.9rem; font-weight: bold;">Lihat Aset &rarr;</span>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 NyomotAset - Dibuat dengan semangat oleh Muhammad Rakha Skenda.</p>
+    </footer>
+
+    <!-- PANGGIL SCRIPT UTAMA -->
+    <script src="script.js"></script>
+</body>
+</html>
